@@ -1,0 +1,17 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "ionBottomNavDrawer",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "ion-bottom-nav-drawer",
+      "kebab-case"
+    ]
+  }
+}

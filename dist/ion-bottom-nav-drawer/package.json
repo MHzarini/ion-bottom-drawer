@@ -26,5 +26,18 @@
   "homepage": "https://toniantunovi.github.io/ion-bottom-drawer/",
   "directories": {
     "doc": "docs"
+  },
+  "main": "bundles/ion-bottom-nav-drawer.umd.js",
+  "module": "fesm5/ion-bottom-nav-drawer.js",
+  "es2015": "fesm2015/ion-bottom-nav-drawer.js",
+  "esm5": "esm5/ion-bottom-nav-drawer.js",
+  "esm2015": "esm2015/ion-bottom-nav-drawer.js",
+  "fesm5": "fesm5/ion-bottom-nav-drawer.js",
+  "fesm2015": "fesm2015/ion-bottom-nav-drawer.js",
+  "typings": "ion-bottom-nav-drawer.d.ts",
+  "metadata": "ion-bottom-nav-drawer.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
   }
 }

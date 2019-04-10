@@ -1,0 +1,30 @@
+import { AfterViewInit, ElementRef, EventEmitter, OnChanges, Renderer2, SimpleChanges } from '@angular/core';
+import { DomController, Platform } from '@ionic/angular';
+import { DrawerState } from './drawer-state';
+export declare class IonBottomNavDrawerComponent implements AfterViewInit, OnChanges {
+    private _element;
+    private _renderer;
+    private _domCtrl;
+    private _platform;
+    dockedHeight: number;
+    shouldBounce: boolean;
+    disableDrag: boolean;
+    distanceTop: number;
+    transition: string;
+    state: DrawerState;
+    minimumHeight: number;
+    stateChange: EventEmitter<DrawerState>;
+    private _startPositionTop;
+    private readonly _BOUNCE_DELTA;
+    constructor(_element: ElementRef, _renderer: Renderer2, _domCtrl: DomController, _platform: Platform);
+    ngAfterViewInit(): void;
+    ngOnChanges(changes: SimpleChanges): void;
+    private _setDrawerState;
+    private _handlePanStart;
+    private _handlePanEnd;
+    private _handleTopPanEnd;
+    private _handleDockedPanEnd;
+    private _handleBottomPanEnd;
+    private _handlePan;
+    private _setTranslateY;
+}

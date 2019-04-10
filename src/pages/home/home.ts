@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DrawerState } from '../../modules/ion-bottom-drawer/drawer-state';
+import { DrawerState } from 'ion-bottom-nav-drawer';
 
 @Component({
   selector: 'page-home',

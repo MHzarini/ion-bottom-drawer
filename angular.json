@@ -186,7 +186,7 @@
         }
       }
     },
-    "ionBottomNavDrawer": {
+    "ion-bottom-nav-drawer": {
       "root": "projects/ion-bottom-nav-drawer",
       "sourceRoot": "projects/ion-bottom-nav-drawer/src",
       "projectType": "library",

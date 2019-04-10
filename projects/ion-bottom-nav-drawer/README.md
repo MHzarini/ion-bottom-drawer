@@ -1,24 +1,68 @@
-# IonBottomNavDrawer
+# Ionic 4 Bottom Navigation Drawer
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
+Bottom Navigation Drawer component for Ionic 4.
 
-## Code scaffolding
+# Installation
 
-Run `ng generate component component-name --project ionBottomNavDrawer` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ionBottomNavDrawer`.
-> Note: Don't forget to add `--project ionBottomNavDrawer` or else it will be added to the default project in your `angular.json` file. 
+```
+$ npm i ion-bottom-nav-drawer --save
+```
 
-## Build
+# API
 
-Run `ng build ionBottomNavDrawer` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Inputs
 
-## Publishing
+  - `dockedHeight: number` - Height of the drawer in docked position. Default value: `50`.
+  - `shouldBounce: boolean` - Determines whether the drawer should automatically bounce between docked, closed and top positions. Default value: `True`.
+  - `disableDrag: boolean` - Disables drawer drag. Default value: `False`.
+  - `distanceTop: number` - Distance from top of fully opened drawer. Default value: `0`.
+  - `transition: string` - Specify custom CSS transition for bounce movement. Default value: `0.25s ease-in-out`.
+  - `state: DrawerState` - Current state of the drawer. Possible values: DrawerState.Bottom, DrawerState.Docked, DrawerState.Top. Default value: `DrawerState.Docked`.
+  - `minimumHeight: number` - Height of the drawer when in closed state calculated from the bottom of the screen. Default value: `0`. 
 
-After building your library with `ng build ionBottomNavDrawer`, go to the dist folder `cd dist/ion-bottom-nav-drawer` and run `npm publish`.
 
-## Running unit tests
+# Behavior
+The drawer has three basic states: closed, docked and opened to maximum 'distanceTop' from top of the screen. It will bounce by default which means it will always go to one of three states above. This can be disabled by setting 'shouldBounce' to false.
 
-Run `ng test ionBottomNavDrawer` to execute the unit tests via [Karma](https://karma-runner.github.io).
+If 'ion-content' is beneath the drawer it might be bouncing itself while dragging the drawer. To prevent that add 'no-bounce' attribute to ion-content element.
 
-## Further help
+```html
+<ion-content padding no-bounce>
+...
+</ion-content>
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# Integration and Usage
+First, import the IonBottomNavDrawerModule to your app:
+
+```typescript
+import { IonBottomNavDrawerModule } from 'ion-bottom-nav-drawer';
+
+@NgModule({
+  imports: [
+    ...,
+    IonBottomNavDrawerModule
+  ],
+  ...
+})
+export class AppModule { }
+```
+
+Use it in your component template like this:
+
+```html
+<ion-content no-bounce>Component content.<ion-content>
+
+<ion-bottom-nav-drawer [disableDrag]="disableDrag" [(state)]="drawerState" [minimumHeight]="minimumHeight"
+  [dockedHeight]="dockedHeight" [shouldBounce]="shouldBounce" [distanceTop]="distanceTop">
+  <div class="drawer-content">
+    Bottom Drawer Content
+  </div>
+</ion-bottom-nav-drawer>
+```
+
+# License
+
+The MIT License (MIT)
+
+Copyright (c) [Mohammad Nuairat](mailto:mhn.zarini@gmail.com)

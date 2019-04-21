@@ -1,6 +1,6 @@
 {
   "name": "ion-bottom-nav-drawer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A generic Bottom Navigation Drawer component for Ionic 4 and Angular 2+",
   "repository": {
     "type": "git",
@@ -10,6 +10,7 @@
   "licence": "MIT",
   "keywords": [
     "Angular",
+    "ion",
     "Library",
     "ionic",
     "ionic4",

@@ -57,7 +57,7 @@ export class IonBottomNavDrawerComponent implements AfterViewInit, OnChanges {
   }
 
   ngAfterViewInit() {
-    this._renderer.setStyle(this._element.nativeElement.querySelector('.ion-bottom-drawer-scrollable-content'),
+    this._renderer.setStyle(this._element.nativeElement.querySelector('.ion-bottom-drawer-scrollable-content :first-child'),
       'touch-action', 'none');
     this._setDrawerState(this.state);
 
@@ -169,6 +169,7 @@ export class IonBottomNavDrawerComponent implements AfterViewInit, OnChanges {
   }
 
   private _setTranslateY(value) {
+    console.log(value);
     this._domCtrl.write(() => {
       this._renderer.setStyle(this._element.nativeElement, 'transform', 'translateY(' + value + ')');
     });

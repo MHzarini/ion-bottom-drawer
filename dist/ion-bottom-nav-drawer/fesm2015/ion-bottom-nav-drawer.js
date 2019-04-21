@@ -48,7 +48,7 @@ class IonBottomNavDrawerComponent {
      * @return {?}
      */
     ngAfterViewInit() {
-        this._renderer.setStyle(this._element.nativeElement.querySelector('.ion-bottom-drawer-scrollable-content'), 'touch-action', 'none');
+        this._renderer.setStyle(this._element.nativeElement.querySelector('.ion-bottom-drawer-scrollable-content :first-child'), 'touch-action', 'none');
         this._setDrawerState(this.state);
         /** @type {?} */
         const hammer = new Hammer(this._element.nativeElement);
@@ -204,6 +204,7 @@ class IonBottomNavDrawerComponent {
      * @return {?}
      */
     _setTranslateY(value) {
+        console.log(value);
         this._domCtrl.write((/**
          * @return {?}
          */

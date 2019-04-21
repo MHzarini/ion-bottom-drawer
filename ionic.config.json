@@ -1,5 +1,7 @@
 {
   "name": "ion-bottom-nav-drawer-app",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

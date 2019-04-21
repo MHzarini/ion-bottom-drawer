@@ -47,7 +47,7 @@
          */
             function () {
                 var _this = this;
-                this._renderer.setStyle(this._element.nativeElement.querySelector('.ion-bottom-drawer-scrollable-content'), 'touch-action', 'none');
+                this._renderer.setStyle(this._element.nativeElement.querySelector('.ion-bottom-drawer-scrollable-content :first-child'), 'touch-action', 'none');
                 this._setDrawerState(this.state);
                 /** @type {?} */
                 var hammer = new Hammer(this._element.nativeElement);
@@ -246,6 +246,7 @@
          */
             function (value) {
                 var _this = this;
+                console.log(value);
                 this._domCtrl.write(( /**
                  * @return {?}
                  */function () {

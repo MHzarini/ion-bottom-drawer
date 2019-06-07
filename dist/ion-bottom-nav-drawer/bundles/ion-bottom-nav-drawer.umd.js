@@ -246,7 +246,6 @@
          */
             function (value) {
                 var _this = this;
-                console.log(value);
                 this._domCtrl.write(( /**
                  * @return {?}
                  */function () {
@@ -256,7 +255,7 @@
         IonBottomNavDrawerComponent.decorators = [
             { type: core.Component, args: [{
                         selector: 'ion-bottom-nav-drawer',
-                        template: "<ion-content class=\"ion-bottom-drawer-scrollable-content\" no-bounce>\n  <ng-content></ng-content>\n</ion-content>\n",
+                        template: "<ion-content class=\"ion-bottom-drawer-scrollable-content\" no-bounce>\r\n  <ng-content></ng-content>\r\n</ion-content>\r\n",
                         styles: [":host{width:100%;height:100%;position:absolute;left:0;z-index:11!important;background-color:#fff;-webkit-transform:translateY(100vh);transform:translateY(100vh)}"]
                     }] }
         ];
